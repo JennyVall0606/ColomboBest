@@ -1,1 +1,304 @@
-<p>home works!</p>
+<!-- Encabezado con logo y navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container-fluid">
+    <!-- Logo -->
+   <div class="navbar-brand d-flex align-items-center">
+  <img src="assets/logo.png" alt="Logo" class="logo">
+  <span class="brand-text">Colombobest</span>
+</div>
+
+    <!-- Botón responsive -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expanded="false" aria-label="Toggle navigation">
+
+    </button>
+
+    <!-- Menú -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+             <img src="assets/carro.png" alt="carro" width="20" height="20" class="me-1">
+            Carros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+             <img src="assets/avion.png" alt="avion" width="20" height="20" class="me-1">
+            Vuelos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+             <img src="assets/recurso.png" alt="Hotel" width="20" height="20" class="me-1">
+            Hoteles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+             <img src="assets/promocion.png" alt="promocion" width="20" height="20" class="me-1">
+            Promociones</a>
+        </li>
+      </ul>
+
+      <!-- Iconos a la derecha -->
+      <div class="d-flex align-items-center ms-3">
+        <!-- Idiomas -->
+        <button class="btn btn-sm btn-outline-secondary me-2">🇪🇸</button>
+        <button class="btn btn-sm btn-outline-secondary me-3">🇺🇸</button>
+
+        <!-- Usuario -->
+        <button class="btn btn-sm btn-outline-primary d-flex align-items-center">
+          <img src="assets/user.png" alt="User" width="24" height="24" class="me-1">
+          <span>Iniciar Sesión</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Banner principal con buscador -->
+<div class="banner">
+  <div class="banner-content">
+    <!-- Encabezado -->
+    <div class="search-header">
+      <h1>Busque su vuelo</h1>
+      <p>Vuelos nacionales e internacionales</p>
+    </div>
+    
+    <!-- Opciones de tipo de vuelo -->
+    <div class="flight-options">
+      <div class="flight-option">
+        <input type="radio" id="ida-vuelta" name="flight-type" value="round-trip" checked>
+        <label for="ida-vuelta">Ida y Vuelta</label>
+      </div>
+      <div class="flight-option">
+        <input type="radio" id="solo-ida" name="flight-type" value="one-way">
+        <label for="solo-ida">Solo Ida</label>
+      </div>
+      <div class="flight-option">
+        <input type="radio" id="multidestino" name="flight-type" value="multi-city">
+        <label for="multidestino">Multidestino</label>
+      </div>
+    </div>
+    
+    <!-- Formulario de búsqueda -->
+    <form class="search-form">
+      <div class="search-row">
+        <!-- Origen -->
+        <div class="search-field">
+          <label for="origin">Origen</label>
+          <input type="text" id="origin" placeholder="Bogotá, Colombia (BOG)" value="Bogotá, Colombia (BOG)">
+        </div>
+        
+        <!-- Botón intercambio -->
+        <div class="search-field" style="display: flex; align-items: end; justify-content: center;">
+          <button type="button" class="swap-btn">⇄</button>
+        </div>
+        
+        <!-- Destino -->
+        <div class="search-field">
+          <label for="destination">Destino</label>
+          <input type="text" id="destination" placeholder="Ingrese el destino">
+        </div>
+        
+        <!-- Fechas -->
+        <div class="search-field">
+          <label for="departure">Fechas</label>
+          <input type="date" id="departure" value="2025-09-23">
+        </div>
+        
+        <div class="search-field">
+          <label for="return" style="opacity: 0;">Regreso</label>
+          <input type="date" id="return" value="2025-09-30">
+        </div>
+        
+        <!-- Pasajeros -->
+        <div class="search-field">
+          <label for="passengers">Pasajeros</label>
+          <select id="passengers">
+            <option value="1">1 pasajero</option>
+            <option value="2">2 pasajeros</option>
+            <option value="3">3 pasajeros</option>
+            <option value="4">4 pasajeros</option>
+          </select>
+        </div>
+        
+        <!-- Botón de búsqueda -->
+        <div class="search-field" style="display: flex; align-items: end;">
+          <button type="submit" class="search-btn">
+            <svg viewBox="0 0 24 24">
+              <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Opciones adicionales -->
+      <div class="additional-options">
+        <div class="checkbox-option">
+          <input type="checkbox" id="carry-on">
+          <label for="carry-on">Equipaje de mano</label>
+        </div>
+        <div class="checkbox-option">
+          <input type="checkbox" id="checked-bag">
+          <label for="checked-bag">Equipaje de bodega</label>
+        </div>
+        <a href="#" class="more-options">Más opciones ▼</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Sección ofertas y promociones -->
+<section class="ofertas-section">
+  <div class="ofertas-container">
+    <!-- Encabezado de la sección -->
+    <div class="ofertas-header">
+      <h2>Ofertas Recomendadas</h2>
+      <p>Descubre los mejores destinos con las promociones exclusivas de <span class="brand-highlight">Colombobest</span></p>
+    </div>
+    
+    <!-- Grid de ofertas -->
+    <div class="ofertas-grid">
+      
+      <!-- Oferta Destacada -->
+      <div class="oferta-card featured-offer">
+        <div class="discount-badge">-40% OFF</div>
+        <div class="oferta-image">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cartagena">
+        </div>
+        <div class="oferta-content">
+          <h3 class="oferta-title">Escapada Romántica a Cartagena</h3>
+          <div class="oferta-destination">Cartagena de Indias</div>
+          <p class="oferta-description">
+            Vive una experiencia única en la ciudad amurallada más hermosa de Colombia. 
+            Incluye vuelo + hotel 4 estrellas + desayunos.
+          </p>
+          <div class="price-container">
+            <span class="price-original">$800.000</span>
+            <span class="price-offer">$480.000</span>
+            <span class="price-currency">COP</span>
+          </div>
+          <div class="oferta-details">
+            <div class="oferta-dates">3-7 Oct</div>
+            <div class="oferta-duration">4 días / 3 noches</div>
+          </div>
+          <button class="reserve-btn">Reservar Ahora</button>
+        </div>
+      </div>
+      
+      <!-- Oferta 1 -->
+      <div class="oferta-card">
+        <div class="discount-badge">-25% OFF</div>
+        <div class="oferta-image">
+          <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="San Andrés">
+        </div>
+        <div class="oferta-content">
+          <h3 class="oferta-title">Paraíso Caribeño</h3>
+          <div class="oferta-destination">San Andrés Islas</div>
+          <p class="oferta-description">
+            Disfruta del mar de siete colores con esta increíble promoción. 
+            Vuelo directo desde Bogotá + hotel todo incluido.
+          </p>
+          <div class="price-container">
+            <span class="price-original">$1.200.000</span>
+            <span class="price-offer">$900.000</span>
+            <span class="price-currency">COP</span>
+          </div>
+          <div class="oferta-details">
+            <div class="oferta-dates">10-15 Oct</div>
+            <div class="oferta-duration">5 días / 4 noches</div>
+          </div>
+          <button class="reserve-btn">Reservar Ahora</button>
+        </div>
+      </div>
+      
+      <!-- Oferta 2 -->
+      <div class="oferta-card">
+        <div class="discount-badge">-30% OFF</div>
+        <div class="oferta-image">
+          <img src="https://images.unsplash.com/photo-1570717173027-41bca1b5b463?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Eje Cafetero">
+        </div>
+        <div class="oferta-content">
+          <h3 class="oferta-title">Aventura Cafetera</h3>
+          <div class="oferta-destination">Eje Cafetero</div>
+          <p class="oferta-description">
+            Conoce la región cafetera de Colombia. Tour por fincas cafeteras, 
+            alojamiento rural y experiencias únicas.
+          </p>
+          <div class="price-container">
+            <span class="price-original">$650.000</span>
+            <span class="price-offer">$455.000</span>
+            <span class="price-currency">COP</span>
+          </div>
+          <div class="oferta-details">
+            <div class="oferta-dates">20-24 Oct</div>
+            <div class="oferta-duration">4 días / 3 noches</div>
+          </div>
+          <button class="reserve-btn">Reservar Ahora</button>
+        </div>
+      </div>
+      
+      <!-- Oferta 3 -->
+      <div class="oferta-card">
+        <div class="discount-badge">-35% OFF</div>
+        <div class="oferta-image">
+          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tayrona">
+        </div>
+        <div class="oferta-content">
+          <h3 class="oferta-title">Natura y Playa</h3>
+          <div class="oferta-destination">Parque Tayrona</div>
+          <p class="oferta-description">
+            Conecta con la naturaleza en uno de los parques más hermosos de Colombia. 
+            Incluye transporte, alojamiento y alimentación.
+          </p>
+          <div class="price-container">
+            <span class="price-original">$550.000</span>
+            <span class="price-offer">$357.500</span>
+            <span class="price-currency">COP</span>
+          </div>
+          <div class="oferta-details">
+            <div class="oferta-dates">25-29 Oct</div>
+            <div class="oferta-duration">4 días / 3 noches</div>
+          </div>
+          <button class="reserve-btn">Reservar Ahora</button>
+        </div>
+      </div>
+      
+      <!-- Oferta 4 -->
+      <div class="oferta-card">
+        <div class="discount-badge">-20% OFF</div>
+        <div class="oferta-image">
+          <img src="https://images.unsplash.com/photo-1555400569-c7de6b51b5dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Medellín">
+        </div>
+        <div class="oferta-content">
+          <h3 class="oferta-title">Ciudad de la Eterna Primavera</h3>
+          <div class="oferta-destination">Medellín, Antioquia</div>
+          <p class="oferta-description">
+            Descubre la transformación de Medellín. City tour, teleférico, 
+            Guatapé y la mejor gastronomía paisa.
+          </p>
+          <div class="price-container">
+            <span class="price-original">$500.000</span>
+            <span class="price-offer">$400.000</span>
+            <span class="price-currency">COP</span>
+          </div>
+          <div class="oferta-details">
+            <div class="oferta-dates">1-4 Nov</div>
+            <div class="oferta-duration">3 días / 2 noches</div>
+          </div>
+          <button class="reserve-btn">Reservar Ahora</button>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Call to action -->
+    <div class="ofertas-cta">
+      <h3>¿No encontraste tu destino ideal?</h3>
+      <p>Contáctanos y crearemos el viaje perfecto para ti con las mejores ofertas exclusivas</p>
+      <button class="cta-btn">Ver Todas las Ofertas</button>
+    </div>
+  </div>
+</section>
+
