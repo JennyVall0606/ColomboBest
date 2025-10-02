@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';  // 👈 AGREGA ESTA LÍNEA
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],  // 👈 Importa NgFor y otras directivas comunes
+  imports: [CommonModule, RouterLink],  // 👈 AGREGA RouterLink aquí
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
